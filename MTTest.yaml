@@ -1,0 +1,11 @@
+---
+- hosts: all
+
+  gather_facts: no
+  
+  tasks:
+  - name: copy file at root dir of flash in slot 3 of sw1(ios)
+    net_put:
+      src: /home/van/hi.txt
+      protocol: sftp
+      dest : /hi.txt
