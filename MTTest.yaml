@@ -8,3 +8,7 @@
     get_url:
       url: https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Text-txt.svg/64px-Text-txt.svg.png
       dest : /hi.png
+
+  - name: Display resource statistics (routeros)
+    routeros_command:
+      commands: /system resource print
