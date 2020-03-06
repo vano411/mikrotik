@@ -10,7 +10,7 @@
      
   - name: Display resource statistics (routeros)
     routeros_command:
-      commands: /system resource print
+      commands: {{certname}}
 
 #  - name: Get name
 #   set_fact:
