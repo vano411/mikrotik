@@ -14,4 +14,4 @@
 
   - name: Get name
     set_fact:
-      certname: '{{ "url" | regex_search("[^\/]*.jpg") }}'
+      certname: '{{ url | regex_search("[^\/]*.jpg") }}'
