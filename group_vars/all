@@ -1,5 +1,5 @@
 ---
 ansible_connection: network_cli
 ansible_network_os: routeros
-certname: '{{ url | regex_search("[^\/]*.crt") }}'
-keytname: '{{ url | regex_search("[^\/]*.key") }}'
+certname: '{{ certurl | regex_search("[^\/]*.crt") }}'
+keytname: '{{ keyurl | regex_search("[^\/]*.key") }}'
