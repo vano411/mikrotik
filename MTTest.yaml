@@ -12,5 +12,5 @@
     routeros_command:
       commands:
         - /certificate
-        - import file-{{certname}}
-        - /print
+        - import file-name={{certname}}
+        - 
