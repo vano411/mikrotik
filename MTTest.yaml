@@ -17,5 +17,6 @@
   - name: Set new certificate on all MT Server Profiles 
     routeros_command:
       commands: 
-        - /ip hotspot profile
-        - print
+        - /ip hotspot profile set 0 ssl-certificate=2020mikrotik_boingohotspot_net
+        - /ip hotspot profile print
+
