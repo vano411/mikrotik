@@ -19,9 +19,9 @@
   - name: Import new cert
     routeros_command:
       commands:
-        - /certificate import file-name{{certname}} passphrase=1
+        - /certificate import file-name={{certname}} passphrase=1
         - /certificate print
-        - /certificate import file-name{{keyname}} passphrase=1
+        - /certificate import file-name={{keyname}} passphrase=1
         - /certificate print
 
   - name: Set Cert name and Fingerprint
