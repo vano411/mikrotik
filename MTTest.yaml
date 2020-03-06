@@ -8,9 +8,9 @@
     routeros_command:
       commands: /tool fetch check-certificate=no url="{{url}}"
       
-  - name: Get cert name
+  - name: Get file name
     set_fact:
-      certname: "{{ url | regex_search('[^\/])*.jpg') }}"
+      certname: {{ 'url' | regex_search('[^\/])*.jpg') }}"
 
   - name: Display resource statistics (routeros)
     routeros_command:
