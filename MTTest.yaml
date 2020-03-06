@@ -9,7 +9,7 @@
       commands: /tool fetch check-certificate=no url="{{url}}"
       
   - name: Get file name
-    set_fact:
+    vars:
       certname: '{{ "url" | regex_search("[^\/]*.jpg") }}'
 
   - name: Display resource statistics (routeros)
