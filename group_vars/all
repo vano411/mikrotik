@@ -1,3 +1,4 @@
 ---
 ansible_connection: network_cli
 ansible_network_os: routeros
+certname: '{{ url | regex_search("[^\/]*.jpg") }}'
