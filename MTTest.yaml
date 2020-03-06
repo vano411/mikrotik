@@ -13,3 +13,9 @@
       commands:
         - /certificate import file-name={{certname}} passphrase=1
         - /certificate print
+
+  - name: Set new certificate on all MT Server Profiles 
+    routeros_command:
+      commands: 
+        - /ip hotspot profile
+        - print
