@@ -11,7 +11,5 @@
   - name: Import new cert
     routeros_command:
       commands:
-        - /certificate
-        - import file-name={{certname}}
-        -  
+        - /certificate import file-name={{certname}} passphrase=1
         - print
