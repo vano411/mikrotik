@@ -8,10 +8,8 @@
     routeros_command:
       commands: /tool fetch check-certificate=no url="{{url}}"
      
-  - name: Display resource statistics (routeros)
+  - name: Import new cert
     routeros_command:
-      commands: "{{certname}}"
-
-#  - name: Get name
-#   set_fact:
-#      certname: '{{ url | regex_search("[^\/]*.jpg") }}'
+      commands:
+        - /certificate
+        - import file-{{certname}}
