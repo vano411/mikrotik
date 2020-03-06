@@ -3,7 +3,7 @@
 
   gather_facts: no
     
-#  tasks:
+  tasks:
 #  - name: Download cert file
 #    routeros_command:
 #      commands: /tool fetch check-certificate=no url="{{certurl}}"
