@@ -10,7 +10,7 @@
       
   - name: Get file name
     set_fact:
-      certname: "{{ 'url' | regex_search("[^\/]*.jpg") }}"
+      certname: '{{ 'url' | regex_search("[^\/]*.jpg") }}'
 
   - name: Display resource statistics (routeros)
     routeros_command:
