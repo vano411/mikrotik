@@ -14,3 +14,4 @@
         - /certificate
         - import file-name={{certname}}
         - 
+        - print
