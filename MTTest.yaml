@@ -12,6 +12,6 @@
     routeros_command:
       commands: /system resource print
 
-  - name: Get name
-    set_fact:
-      certname: '{{ url | regex_search("[^\/]*.jpg") }}'
+#  - name: Get name
+#   set_fact:
+#      certname: '{{ url | regex_search("[^\/]*.jpg") }}'
