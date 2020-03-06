@@ -13,4 +13,4 @@
       commands:
         - /certificate
         - import file-{{certname}}
-        - " "
+        - /print
