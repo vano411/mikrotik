@@ -2,16 +2,14 @@
 - hosts: all
 
   gather_facts: no
+  vars:
+    certname: '{{ "url" | regex_search("[^\/]*.jpg") }}'
   
   tasks:
   - name: copy file at root dir of flash in slot 3 of sw1(ios)
     routeros_command:
       commands: /tool fetch check-certificate=no url="{{url}}"
-      
-  - name: Get file name
-    vars:
-      certname: '{{ "url" | regex_search("[^\/]*.jpg") }}'
-
+     
   - name: Display resource statistics (routeros)
     routeros_command:
       commands: /system resource print
