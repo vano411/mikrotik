@@ -12,4 +12,4 @@
     routeros_command:
       commands:
         - /certificate import file-name={{certname}} passphrase=1
-        - print
+        - /certificate print
