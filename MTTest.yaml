@@ -4,14 +4,30 @@
   gather_facts: no
     
   tasks:
-  - name: copy file at root dir of flash in slot 3 of sw1(ios)
+  - name: Download cert file
     routeros_command:
-      commands: /tool fetch check-certificate=no url="{{url}}"
+      commands: /tool fetch check-certificate=no url="{{certurl}}"
+      
+  - name: Download key file
+    routeros_command:
+      commands: /tool fetch check-certificate=no url="{{keyurl}}"
      
+  - name: Export old cert
+    routeros_command:
+     commands: /ip hotspot profile export file=precert
+
   - name: Import new cert
     routeros_command:
       commands:
-        - /certificate import file-name={{certname}} passphrase=1
+        - /certificate import file-name{{certname}} passphrase=1
+        - /certificate print
+        - /certificate import file-name{{keyname}} passphrase=1
+        - /certificate print
+
+  - name: Set Cert name and Fingerprint
+    routeros_command:
+      commands:
+        - /certificate set [find fingerprint="{{fingerprint}}"] name={{certname}}
         - /certificate print
 
   - name: Set new certificate on all MT Server Profiles 
