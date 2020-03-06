@@ -3,14 +3,14 @@
 
   gather_facts: no
     
-  tasks:
-  - name: Download cert file
-    routeros_command:
-      commands: /tool fetch check-certificate=no url="{{certurl}}"
+#  tasks:
+#  - name: Download cert file
+#    routeros_command:
+#      commands: /tool fetch check-certificate=no url="{{certurl}}"
       
-  - name: Download key file
-    routeros_command:
-      commands: /tool fetch check-certificate=no url="{{keyurl}}"
+#  - name: Download key file
+#    routeros_command:
+#      commands: /tool fetch check-certificate=no url="{{keyurl}}"
      
   - name: Export old cert
     routeros_command:
